@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze?Language=en&details=&visualFeatures=Description
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://upload.wikimedia.org/wikipedia/commons/e/e5/Hotel_Puente_Romano.jpg"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<VISION_API_KEY>"
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '390'
+      Content-Type:
+      - application/json; charset=utf-8
+      Csp-Billing-Usage:
+      - CognitiveServices.ComputerVision.Description=1
+      Apim-Request-Id:
+      - a875af11-f68f-4b1c-bd0c-457fdc2274f8
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Tue, 14 Apr 2020 15:59:08 GMT
+    body:
+      encoding: UTF-8
+      string: '{"description":{"tags":["outdoor","mountain","front","people","lot","beach","group","large","standing","parking","flying","man","street","game","board","kite","white","field"],"captions":[{"text":"a
+        group of people standing in front of a mountain","confidence":0.80996836345632361}]},"requestId":"a875af11-f68f-4b1c-bd0c-457fdc2274f8","metadata":{"width":1024,"height":768,"format":"Jpeg"}}'
+    http_version: 
+  recorded_at: Tue, 14 Apr 2020 15:59:08 GMT
+recorded_with: VCR 3.0.3

@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze?Language=en&details=&visualFeatures=Description
+    body:
+      encoding: UTF-8
+      string: '{"url":"https://en.wikipedia.org/wiki/Main_Page"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<VISION_API_KEY>"
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Length:
+      - '125'
+      Content-Type:
+      - application/json; charset=utf-8
+      Apim-Request-Id:
+      - 9ab2ec69-fdf9-48d8-99e4-63cd73455b68
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Date:
+      - Thu, 16 Apr 2020 10:13:39 GMT
+    body:
+      encoding: UTF-8
+      string: '{"code":"InvalidImageFormat","requestId":"9ab2ec69-fdf9-48d8-99e4-63cd73455b68","message":"Input
+        data is not a valid image."}'
+    http_version: 
+  recorded_at: Thu, 16 Apr 2020 10:13:40 GMT
+recorded_with: VCR 5.0.0

@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&from=en&to=it
+    body:
+      encoding: UTF-8
+      string: '[{"Text":"I am too old for this"}]'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Ocp-Apim-Subscription-Key:
+      - "<TRANSLATOR_API_KEY>"
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Mt-System:
+      - Microsoft,Microsoft
+      X-Requestid:
+      - TRAN.AM3P.0A9D.0414T1559.11C0678
+      Access-Control-Expose-Headers:
+      - X-Metered-Usage
+      - X-RequestId
+      X-Content-Type-Options:
+      - nosniff
+      X-Metered-Usage:
+      - '42'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Date:
+      - Tue, 14 Apr 2020 15:59:07 GMT
+      Content-Length:
+      - '123'
+    body:
+      encoding: UTF-8
+      string: '[{"translations":[{"text":"Soy demasiado viejo para esto","to":"es"},{"text":"Sono
+        troppo vecchio per questo","to":"it"}]}]'
+    http_version: 
+  recorded_at: Tue, 14 Apr 2020 15:59:07 GMT
+recorded_with: VCR 3.0.3
