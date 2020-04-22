@@ -8,7 +8,7 @@ Basic gem to interact with Azure cognitive services via REST API
 ## Use example
 ### Computer vision
 ```ruby
-service = AzureCognitiveServices::ComputerVision.new api_key: 'API_KEY'
+service = AzureCognitiveServices::ComputerVision.new(api_key: 'API_KEY')
 service.analyze_image(url: 'https://upload.wikimedia.org/wikipedia/commons/e/e5/Hotel_Puente_Romano.jpg')
 ```
 
